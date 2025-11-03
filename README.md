@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 E-Com Inicio
 
-## Getting Started
+**Página de inicio de un e-commerce desarrollada con Next.js**, basada en la estructura solicitada por el docente.
+Incluye categorías, listado de productos, filtrado dinámico, paginación y diseño responsivo.
 
-First, run the development server:
+---
+
+## ✅ Características principales
+
+### 🔹 1. **Navbar**
+
+Barra superior con navegación básica.
+
+### 🔹 2. **Hero Section**
+
+Sección principal con imagen destacada, texto promocional y botón de acción.
+
+### 🔹 3. **Categorías (Filtro)**
+
+Listado de categorías centrado horizontalmente.
+Al hacer clic, se filtran los productos sin recargar la página.
+
+### 🔹 4. **Listado de Productos**
+
+Grid responsiva que muestra los productos según la categoría seleccionada.
+
+### 🔹 5. **Paginación**
+
+Los productos se dividen en páginas para mejorar la experiencia del usuario.
+
+### 🔹 6. **Diseño Responsivo**
+
+Adaptado a móvil, tablet y escritorio utilizando Tailwind CSS.
+
+### 🔹 7. **Código Modular**
+
+Componentes separados y organizados:
+
+* `Navbar`
+* `Hero`
+* `Categories`
+* `ProductGrid`
+* `Pagination`
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+e-cominicio/
+├── public/
+│   ├── Camisetas/
+│   ├── heater/
+│   ├── maletas/
+│   ├── oversized/
+│   ├── sacos/
+│   └── ...otros assets
+│
+└── src/
+    ├── app/
+    │   ├── layout.js
+    │   ├── page.js
+    │   └── globals.css
+    │
+    ├── components/
+    │   ├── Categories.jsx
+    │   ├── Grid.jsx
+    │   ├── Hero.jsx
+    │   ├── Pagination.jsx
+    │   └── Navbar.jsx
+    │
+    └── data/
+        └── Products.js
+```
+
+---
+
+## 🧩 Funcionalidad del Filtrado
+
+El filtrado se implementa usando **estado en React (useState)**.
+Los productos se cargan desde un archivo estático (`Products.js`) y se muestran según:
+
+✅ Categoría seleccionada
+✅ Página activa
+✅ Cantidad de productos por página
+
+---
+
+## ⚙️ Tecnologías utilizadas
+
+| Tecnología           | Uso                         |
+| -------------------- | --------------------------- |
+| **Next.js 14**       | Framework principal         |
+| **React**            | Lógica de UI y estados      |
+| **Tailwind CSS**     | Estilos y diseño responsivo |
+| **Material Symbols** | Iconos de navegación        |
+| **JavaScript**       | Manejo de datos y filtrado  |
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/usuario/e-cominicio.git
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecutar el entorno local:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abrir en el navegador:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Posibles Mejoras
 
-To learn more about Next.js, take a look at the following resources:
+* Filtrado por rango de precios
+* Búsqueda por nombre
+* Animaciones con Framer Motion
+* Carrito de compras (context/global state)
+* Páginas de producto individuales
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Desarrollado como práctica para la asignatura de **Frameworks de Desarrollo Web**.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
